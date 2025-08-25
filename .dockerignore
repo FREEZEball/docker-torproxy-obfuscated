@@ -1,0 +1,6 @@
+*.sample
+*.md
+*.kate-swp
+Dockerfile
+LICENSE
+.dockerignore

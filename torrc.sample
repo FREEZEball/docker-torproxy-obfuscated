@@ -1,0 +1,13 @@
+SOCKSPort 0.0.0.0::9050
+SOCKSPolicy accept *
+
+Log notice syslog
+
+DataDirectory /var/lib/tor
+
+UseBridges 1
+ClientTransportPlugin obfs4 exec /usr/bin/lyrebird
+
+#Change bridge placeholders to the ones you got from torproject:
+Bridge obfs4 AAA.BBB.CCC.DDD:EEEEE 0000000000000000000000000000000000000000 cert=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa iat-mode=X
+Bridge obfs4 FFF.GGG.HHH.III:KKKKK 0000000000000000000000000000000000000000 cert=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb iat-mode=Y

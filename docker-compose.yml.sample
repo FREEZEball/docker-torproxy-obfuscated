@@ -1,0 +1,10 @@
+services:
+  torproxy:
+    image: freezeball/docker-torproxy-obfuscated:latest
+    container_name: torproxy
+    ports:
+      - 9050:9050
+    volumes:
+      - /your/torrc/location:/etc/tor
+      - /your/persistent/data/location:/var/lib/tor
+    restart: always
